@@ -15,8 +15,10 @@
     
     <script>
         function addTask(){
-             var taskinput = document.getElementById ('Taskinput');
-
+             getTaskText();
+        }
+        function getTaskText(){
+            var taskinput = document.getElementById ('taskinput');
              console.log(taskinput.value);
         }
     </script>
