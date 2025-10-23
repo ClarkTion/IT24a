@@ -37,7 +37,7 @@
 
         //Satellite
         const satellite = L.tileLayer(
-        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{x}/{y}',
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         {attribution: 'Tiles (c) Esri - Source: Esri, Maxar, Earthstar Geographics, GIS User Community'}
         );
 
@@ -69,8 +69,24 @@
                 markerGroups[type].addLayer(marker);
             });
             //Add all Groups to map initially
-            Object.values(markerGroups).forEach(group = group.addTo(map));
+            Object.values(markerGroups).forEach(group => group.addTo(map));
+
+            //Layer control
+            const baseMaps={
+                "OpenStreetMap": openStreetMap,
+                "Satellite" : satellite
+            }
+
+            const overlayMaps={};
+
+            //Add marker groups to the map accroding to layer filter
+            Object.keys(markerGroups).forEach(type=>{
+                overlayMaps[type] = markerGroups[type];
+            });
+            // Add all elements into the map
+            L.control.layers(baseMaps,overlayMaps,{collapsed:false}).addTo(map);
         })
+        .catch(err => console.error('Error loading JSON', err));
 
     }
 
