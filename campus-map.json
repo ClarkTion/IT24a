@@ -1,0 +1,20 @@
+[
+    {
+    "name": "ICS laboratory 1",
+    "title" : "ICS Lab 1",
+    "description" : "Computer Lab",
+    "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU6hJA2eJSEBM3WxB6ePYEVCB41HPZjjUgxQ&s",
+    "lat" : 8.3594, 
+    "lng": 124.8690,
+    "locationType": "Laboratory"
+    },
+    {
+    "name": "CC",
+    "title" : "CC grounds",
+    "description" : "Covered court",
+    "img" : "https://pbs.twimg.com/media/EapFDJoWsAAvUAw.jpg",
+    "lat" : 8.359990848061994, 
+    "lng": 124.8688520443871,
+    "locationType": "Others"
+    }
+]
