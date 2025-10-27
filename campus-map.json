@@ -16,5 +16,15 @@
     "lat" : 8.359990848061994, 
     "lng": 124.8688520443871,
     "locationType": "Others"
+    },
+    {
+    "name": "Big Pineapple",
+    "title" : "Wow Big pineapple",
+    "description" : "ITS A BIG PINE APPLE I WANT TO SLICE IT",
+    "img" : "https://pbs.twimg.com/media/EapFDJoWsAAvUAw.jpg",
+    "lat" : 8.359990848061994, 
+    "lng": 124.8688520443871,
+    "locationType": "Others"
     }
+
 ]
